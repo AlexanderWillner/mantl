@@ -1,6 +1,6 @@
 ---
 - name: ensure job docker images are present
-  when: provider == "vagrant"
+  when: provider is defined and provider == "vagrant"
   sudo: yes
   command: /usr/bin/docker pull {{ item }}
   with_items:
