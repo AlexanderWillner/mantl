@@ -1,4 +1,5 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python
+
 """set up authentication and security for various components"""
 from __future__ import print_function
 import argparse
@@ -19,6 +20,10 @@ import textwrap
 import uuid
 import yaml
 
+"""hack as python2 does not exist on OS X,  NetBSD, OpenBSD, and Solaris"""
+if sys.version_info.major != 2:
+  print('Require python version 2')
+  sys.exit(1)
 
 class HelpFormatter(argparse.RawTextHelpFormatter,
                     argparse.ArgumentDefaultsHelpFormatter):
