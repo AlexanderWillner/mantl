@@ -114,7 +114,7 @@ git checkout 0.5.0
 A Vagrantfile is provided that provisions everything on a single VM. To run, first ensure that your system has 4GB of RAM free, then:
 
 ```
-sudo pip -H install -r requirements.txt
+sudo -H pip install -r requirements.txt
 ./security-setup
 vagrant up
 ```
