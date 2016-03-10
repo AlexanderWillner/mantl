@@ -6,8 +6,8 @@ import sys
 
 """hack as python2 does not exist on OS X,  NetBSD, OpenBSD, and Solaris"""
 if sys.version_info.major != 2:
-  print('Require python version 2')
-  sys.exit(1)
+    print('This script requires Python 2')
+    sys.exit(1)
 
 """import required libraries"""
 import argparse
